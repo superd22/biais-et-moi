@@ -15,7 +15,7 @@ interface SubmitResultsDTO {
   age: string;
   profession: string;
   jobType: string;
-  specialty: string;
+  specialty?: string;
   emergencyWork: string;
   workplace: string;
   region: string;
@@ -33,7 +33,7 @@ function transformToDTO(body: SubmitResultsRequestBody): SubmitResultsDTO {
     age: identityData?.age || "",
     profession: identityData?.profession || "",
     jobType: identityData?.typePoste || "",
-    specialty: identityData?.specialite || "",
+    specialty: "", // Not collected in the form, can be left empty or set to a default value
     emergencyWork: identityData?.travailUrgences || "",
     workplace: identityData?.structure || "",
     region: identityData?.region || "",

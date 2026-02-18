@@ -5,7 +5,6 @@ export interface IdentityFormData {
   age: string;
   profession: string;
   typePoste: string;
-  specialite: string;
   travailUrgences: string;
   structure: string;
   region: string;

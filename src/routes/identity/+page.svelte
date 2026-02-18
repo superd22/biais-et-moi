@@ -6,7 +6,6 @@
 		AGE_OPTIONS,
 		PROFESSION_OPTIONS,
 		TYPE_POSTE_OPTIONS,
-		SPECIALITES,
 		STRUCTURE_OPTIONS,
 		REGIONS,
 		ORIGINE_ETHNIQUE_OPTIONS
@@ -21,7 +20,6 @@
 			age: '',
 			profession: '',
 			typePoste: '',
-			specialite: '',
 			travailUrgences: '',
 			structure: '',
 			region: '',
@@ -33,7 +31,6 @@
 			age: '',
 			profession: '',
 			typePoste: '',
-			specialite: '',
 			travailUrgences: '',
 			structure: '',
 			region: '',
@@ -65,7 +62,6 @@
 			age: '',
 			profession: '',
 			typePoste: '',
-			specialite: '',
 			travailUrgences: '',
 			structure: '',
 			region: '',
@@ -83,9 +79,9 @@
 		const baseFields = formData.sexe && formData.age && formData.profession && 
 			formData.structure && formData.region && formData.origineEthnique;
 		
-		// If profession is médecin, also require typePoste, specialite, and travailUrgences
+		// If profession is médecin, also require typePoste and travailUrgences
 		if (formData.profession === 'medecin') {
-			return baseFields && formData.typePoste && formData.specialite && formData.travailUrgences;
+			return baseFields && formData.typePoste && formData.travailUrgences;
 		}
 		
 		// If profession is IDE or AS, also require travailUrgences
@@ -150,17 +146,6 @@
 						<option value="">Sélectionnez</option>
 						{#each TYPE_POSTE_OPTIONS as option}
 							<option value={option.value}>{option.label}</option>
-						{/each}
-					</select>
-				</div>
-
-				<!-- Spécialité (only if médecin) -->
-				<div class="form-group">
-					<label for="specialite">Spécialité *</label>
-					<select id="specialite" bind:value={formData.specialite} required>
-						<option value="">Sélectionnez</option>
-						{#each SPECIALITES as specialite}
-							<option value={specialite}>{specialite}</option>
 						{/each}
 					</select>
 				</div>
