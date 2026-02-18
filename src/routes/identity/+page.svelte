@@ -83,9 +83,9 @@
 		const baseFields = formData.sexe && formData.age && formData.profession && 
 			formData.structure && formData.region && formData.origineEthnique;
 		
-		// If profession is médecin, also require typePoste and specialite
+		// If profession is médecin, also require typePoste, specialite, and travailUrgences
 		if (formData.profession === 'medecin') {
-			return baseFields && formData.typePoste && formData.specialite;
+			return baseFields && formData.typePoste && formData.specialite && formData.travailUrgences;
 		}
 		
 		// If profession is IDE or AS, also require travailUrgences
@@ -122,7 +122,7 @@
 
 			<!-- Age -->
 			<div class="form-group">
-				<label for="age">Âge *</label>
+				<label for="age">Tranche d'âge *</label>
 				<select id="age" bind:value={formData.age} required>
 					<option value="">Sélectionnez</option>
 					{#each AGE_OPTIONS as option}
@@ -166,8 +166,8 @@
 				</div>
 			{/if}
 
-			<!-- Travail aux urgences (only if IDE or AS) -->
-			{#if formData.profession === 'ide' || formData.profession === 'as'}
+			<!-- Travail aux urgences (only if médecin, IDE or AS) -->
+			{#if formData.profession === 'medecin' || formData.profession === 'ide' || formData.profession === 'as'}
 				<div class="form-group">
 					<label for="travailUrgences">Travaillez-vous aux urgences ? *</label>
 					<select id="travailUrgences" bind:value={formData.travailUrgences} required>

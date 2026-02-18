@@ -4,7 +4,7 @@
 export const SEXE_OPTIONS = [
   { value: "homme", label: "Homme" },
   { value: "femme", label: "Femme" },
-  { value: "non-binaire", label: "Non-binaire" },
+  { value: "autre", label: "Autre" },
   { value: "prefere-ne-pas-repondre", label: "Je préfère ne pas répondre" },
 ] as const;
 
@@ -22,33 +22,6 @@ export const PROFESSION_OPTIONS = [
   { value: "medecin", label: "Médecin" },
   { value: "ide", label: "IDE (Infirmier Diplômé d'État)" },
   { value: "as", label: "AS (Aide-Soignant)" },
-  { value: "dentiste", label: "Chirurgien-dentiste" },
-  { value: "SF", label: "Sage-femme" },
-  { value: "pharmacien", label: "Pharmacien" },
-  { value: "préparateur en pharmacie", label: "Préparateur en pharmacie" },
-  { value: "kine", label: "Masseur-kinésithérapeute" },
-  { value: "podologue", label: "Pédicure-podologue" },
-  { value: "ergo", label: "Ergothérapeute" },
-  { value: "psychomotricien", label: "Psychomotricien" },
-  { value: "orthophoniste", label: "Orthophoniste" },
-  { value: "orthoptiste", label: "Orthoptiste" },
-  { value: "manip radio", label: "Manipulateur d'électroradiologie médicale" },
-  { value: "technicien de labo", label: "Technicien de laboratoire médical" },
-  { value: "diet", label: "Diététicien" },
-  { value: "audioprothesiste", label: "Audioprothésiste" },
-  { value: "opticien", label: "Opticien-lunetiers" },
-  { value: "prothesiste", label: "Prothésiste et orthoprothésiste" },
-  { value: "puer", label: "Auxiliaire de puéricultrice" },
-  { value: "ambulancier", label: "Ambulancier" },
-  {
-    value: "assistante sociale",
-    label: "Assistant de service social en santé",
-  },
-  {
-    value: "accompagnant educatif",
-    label: "Accompagnant éducatif et sociaux (AES)",
-  },
-  { value: "educ spe", label: "Educateur spécialisé en santé" },
   { value: "autre", label: "Autre" },
   { value: "prefere-ne-pas-repondre", label: "Je préfère ne pas répondre" },
 ] as const;
@@ -56,17 +29,7 @@ export const PROFESSION_OPTIONS = [
 export const TYPE_POSTE_OPTIONS = [
   { value: "externe", label: "Externe" },
   { value: "interne", label: "Interne" },
-  { value: "cca", label: "CCA (Chef de Clinique Assistant)" },
-  {
-    value: "mcu-ph",
-    label:
-      "MCU-PH (Maître de Conférences Universitaire - Praticien Hospitalier)",
-  },
-  {
-    value: "pu-ph",
-    label: "PU-PH (Professeur Universitaire - Praticien Hospitalier)",
-  },
-  { value: "non-concerne", label: "Non concerné" },
+  { value: "medecin-senior", label: "Médecin sénior" },
   { value: "prefere-ne-pas-repondre", label: "Je préfère ne pas répondre" },
 ] as const;
 
@@ -117,20 +80,9 @@ export const SPECIALITES = [
 ] as const;
 
 export const STRUCTURE_OPTIONS = [
-  { value: "chu", label: "CHU (Centre Hospitalier Universitaire)" },
-  { value: "ch", label: "CH (Centre Hospitalier)" },
-  { value: "clinique", label: "Clinique" },
-  { value: "cabinet", label: "Cabinet" },
+  { value: "etablissement-de-sante", label: "Etablissement de santé" },
+  { value: "clinique-privee", label: "Clinique privée" },
   { value: "maison-sante", label: "Maison de santé" },
-  {
-    value: "etablissement-medico-social",
-    label: "Etablissement médico-social",
-  },
-  { value: "ssr", label: "SSR (Soins de Suite de Réadaptation)" },
-  { value: "had", label: "HAD (Hôpital à domicile)" },
-  { value: "sante-mentale", label: "Etablissement de santé mentale" },
-  { value: "hopital-local", label: "Hôpital local" },
-  { value: "hopital-militaire", label: "Hôpital militaire" },
   { value: "prefere-ne-pas-repondre", label: "Je préfère ne pas répondre" },
 ] as const;
 
@@ -156,7 +108,7 @@ export const REGIONS = [
 ] as const;
 
 export const ORIGINE_ETHNIQUE_OPTIONS = [
-  { value: "noire", label: "Personne non blanche" },
-  { value: "blanche", label: "Personne blanche" },
+  { value: "non-caucasien", label: "Non caucasien" },
+  { value: "caucasien", label: "Caucasien" },
   { value: "prefere-ne-pas-repondre", label: "Je préfère ne pas répondre" },
 ] as const;
