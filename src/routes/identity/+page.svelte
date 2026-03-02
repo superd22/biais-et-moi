@@ -154,7 +154,7 @@
 			<!-- Travail aux urgences (only if médecin, IDE or AS) -->
 			{#if formData.profession === 'medecin' || formData.profession === 'ide' || formData.profession === 'as'}
 				<div class="form-group">
-					<label for="travailUrgences">Travaillez-vous aux urgences ? *</label>
+					<label for="travailUrgences">Travaillez-vous aux urgences / SMUR ? *</label>
 					<select id="travailUrgences" bind:value={formData.travailUrgences} required>
 						<option value="">Sélectionnez</option>
 						<option value="oui">Oui</option>
