@@ -59,6 +59,7 @@ export const REGIONS = [
   "Guyane",
   "La Réunion",
   "Mayotte",
+  "Belgique",
 ] as const;
 
 export const ORIGINE_ETHNIQUE_OPTIONS = [
